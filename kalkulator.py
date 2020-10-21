@@ -1,36 +1,43 @@
 # -*- coding: utf8 -*-'
-a = int(input('Pierwsza liczba '))
-b = int(input('Druga liczba '))
-choose = int(input('Wybierz operacje liczbową '))
 
 
-def choice():
+def choose():
+    choice = int(input('Wybierz operacje liczbową '))
     if choice == 1:
-        suma(a, b)
-    if choice == 2:
-        roznica(a, b)
-    if choice == 3:
-        iloczyn(a, b)
-    if choice == 4:
-        iloraz(a, b)
+        print(suma())
+    elif choice == 2:
+        print(roznica())
+    elif choice == 3:
+        print(iloczyn())
+    elif choice == 4:
+        print(iloraz())
 
 
-def suma(a, b):
-    summ = a + b
-    print(summ)
-    return summ
+def suma():
+    x = float(input('Pierwsza liczba '))
+    y = float(input('Druga liczba '))
+    return x + y
 
 
-def roznica(x, y):
+def roznica():
+    x = float(input('Pierwsza liczba '))
+    y = float(input('Druga liczba '))
     roz = x - y
     return roz
 
 
-def iloczyn(x, y):
+def iloczyn():
+    x = float(input('Pierwsza liczba '))
+    y = float(input('Druga liczba '))
     ilocz = x * y
     return ilocz
 
 
-def iloraz(x, y):
+def iloraz():
+    x = float(input('Pierwsza liczba '))
+    y = float(input('Druga liczba '))
     ilor = x / y
     return ilor
+
+
+choose()
